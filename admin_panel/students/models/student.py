@@ -3,7 +3,8 @@ import uuid
 from django.db import models
 from django.contrib.auth.models import User
 from admin_panel.models.university.batch import Batch
-from admin_panel.models.user.base import BaseUser
+from admin_panel.students.models.base import BaseUser
+# from admin_panel.models.user.base import BaseUser
 
 
 class Student(BaseUser):

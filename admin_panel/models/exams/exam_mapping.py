@@ -5,7 +5,8 @@ from admin_panel.models.exams.exam import Exam
 from admin_panel.models.exams.exam_batch import ExamBatch
 from admin_panel.models.questions.question import Question
 from admin_panel.models.university.organization import Organization
-from admin_panel.models.user.student import Student
+from admin_panel.students.models.student import Student
+# from admin_panel.models.user.student import Student
 
 
 class ExamBatchMapping(models.Model):

@@ -7,15 +7,18 @@ from admin_panel.viewsets import (
     OrganizationViewset,
     SubjectViewset,
     TopicViewset,
-    EmployeeViewset,
-    StudentViewset,
-    CustomAuthTokenView,
     QuestionViewset,
     ExamViewset,
     ExamBatchViewset,
     ExamQuestionMappingViewSet,
     ExamBatchMappingViewSet,
     ExamBatchStudentMappingViewSet,
+)
+
+from admin_panel.viewset import (
+    StudentViewset,
+    CustomAuthTokenView,
+    EmployeeViewset,
 )
 
 router = routers.DefaultRouter()
