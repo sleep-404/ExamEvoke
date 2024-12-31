@@ -16,6 +16,7 @@ from admin_panel.viewset import (
     ExamBatchViewSet,
     ExamStudentViewSet,
     ExamEmployeeViewSet,
+    ExamPaperViewSet,
 )
 
 router = routers.DefaultRouter()
@@ -31,5 +32,6 @@ router.register(r"exam", ExamViewSet, basename="exam")
 router.register(r"exam_batch", ExamBatchViewSet, basename="exam_batch")
 router.register(r"exam_student", ExamStudentViewSet, basename="exam_student")
 router.register(r"exam_employee", ExamEmployeeViewSet, basename="exam_employee")
+router.register(r"exam_paper", ExamPaperViewSet, basename="exam_paper")
 urlpatterns = [path("", include(router.urls))]
 urlpatterns += [path('api-token-auth/', CustomAuthTokenView.as_view())]

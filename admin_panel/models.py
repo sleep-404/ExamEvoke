@@ -10,6 +10,8 @@ from .exam_batch.model import (
     SelectionCriteria,
 )
 from .exam_batch_student.model import ExamStudent
+from .exam_paper.model import ExamPaper
+
 
 __all__ = [
     "Exam",
@@ -22,4 +24,5 @@ __all__ = [
     "ModeratorSettings",
     "ScannerSettings",
     "SelectionCriteria",
+    "ExamPaper",
 ]

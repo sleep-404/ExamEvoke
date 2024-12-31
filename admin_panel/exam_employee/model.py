@@ -18,8 +18,8 @@ class ExamEmployee(TimestampMixin):
         editable=False,
         default=uuid.uuid4,
     )
-    exam = models.ForeignKey(
-        'Exam',
+    exam_batch = models.ForeignKey(
+        'ExamBatch',
         on_delete=models.CASCADE,
         related_name='exam_employees'
     )
@@ -40,9 +40,9 @@ class ExamEmployee(TimestampMixin):
     )
 
     class Meta:
-        unique_together = ['exam', 'employee', 'role']
+        unique_together = ['exam_batch', 'employee', 'role']
         ordering = ['-created_at']
 
     def __str__(self):
-        return f"{self.employee.first_name} - {self.role} - {self.exam.name}"
+        return f"{self.employee} - {self.role} - {self.exam_batch}"
 
